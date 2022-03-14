@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500&display=swap" rel="stylesheet">
+
+    <title>Clinical Care | Registration</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.7rem;
+        background-image: url(images/reg_bg1.jpg);
+        background-size: cover;
+        box-sizing: border-box;
+    }
+    
+     ::placeholder {
+        font-size: 0.7rem;
+    }
+    
+    .welcome {
+        height: 100vh;
+        /* width: 100%; */
+        display: grid;
+        grid-template-areas: 'header' 'main';
+        grid-template-rows: 80px 1fr;
+        padding: 15px;
+    }
+    
+    .header {
+        grid-area: header;
+        /* background-image: url(images/reg_bg1.jpg);
+        background-size: cover; */
+        color: #fff;
+        /* background-image: linear-gradient(#0d47a1, #40c4ff); */
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border: 2px solid #40c4ff;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 100%;
+    }
+    
+    .main {
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+    }
+    
+    fieldset {
+        padding: 10px;
+    }
+    
+    legend {
+        font-size: 1rem;
+    }
+    
+    .inputs {
+        padding-bottom: 10px;
+    }
+    
+    label {
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+    
+    .gender {
+        font-size: 00.7rem;
+    }
+    
+    #registrationForm {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    
+    }
+    
+    .btn {
+        background-color: #fff;
+    }
+    
+    .btn:hover {
+        background-color: whitesmoke;
+    }
+    
+    h6 {
+        font-size: 0.9rem;
+        color: #fff;
+        font-weight: light;
+    }
+    
+    .asterisk {
+        color: red;
+    }
+    h3{
+        margin-top: 3px;
+    }
+    .logout-div{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .logout{
+        background-color: #fff;
+        color: #000;
+        font-size: 0.90rem;
+        text-decoration: none;
+        padding: 2px 5px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        height: 25px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="welcome">
+            <header class="header">
+                <h1>The Medical Town</h1>
+            </header>
+            <main class="main">
+                <div class="registration">
+                    <div class="logout-div">
+                        <a href="index.html" class=" logout">LOGOUT</a>
+                    </div>
+                    <h3>Patient Form</h3>
+                    <!-- <p>Labels with <span class="asterisk">*</span> are mandatory fields.</p> -->
+                    <form action="" id="registrationForm" class="container">
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-4 inputs">
+                                    <label for="" class="label-control">First Name: <span class="asterisk">*</span> </label>
+                                    <input type="text" name="fName" id="fName" class="form-control" value="" required>
+                                    <small id="error-fname"></small>
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-4 inputs">
+                                    <label for="" class="label-control">Middle Name: <span class="asterisk">*</span></label>
+                                    <input type="text" name="mName" id="mName" class="form-control" value="">
+
+                                </div>
+                                <div class="col-12 col-md-12 col-lg-4 inputs">
+                                    <label for="" class="label-control">Last Name: <span class="asterisk">*</span></label>
+                                    <input type="text" name="lName" id="lName" class="form-control" value="" required>
+                                    <small id="error-lname"></small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-12 inputs">
+                                    <label for="" class="label-control">Address: <span class="asterisk">*</span></label>
+                                    <input type="text" name="address" id="address" class="form-control" value="" required>
+                                    <small id="error-address"></small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-4 col-lg-4 inputs">
+                                    <label for="" class="label-control">Mobile Number: <span class="asterisk">*</span></label>
+                                    <input type="number" name="mobile" id="mobile" class="form-control" maxlength="11" placeholder="11 digit no. (09xxxxxxxxx)" required>
+                                    <small id="error-mobile"></small>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4 inputs">
+                                    <label for="" class="label-control">Birth Date: <span class="asterisk">*</span></label>
+                                    <input type="date" name="bDAte" id="bDate" class="form-control" min="1800-12-31" required>
+                                    <small id="error-bdate"></small>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4 inputs ">
+                                    <label for="" class="label-control">Gender: <span class="asterisk">*</span></label>
+                                    <br>
+                                    <input type="radio" name="gender" id="gender" value="Male" class="form-check-input" required>
+                                    <label class="form-check-label" for="">Male</label>
+                                    <br>
+                                    <input type="radio" name="gender" id="gender" value="Female" class="form-check-input" required>
+                                    <label class="form-check-label" for="">Female</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Medical Information</legend>
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-4">
+                                    <label for="" class="label-control">Medical History:</label>
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="asthma" value="Asthma">Asthma
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="cancer" value="Cancer">Cancer
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="cardiac-disease" value="Cardiac Disease">Cardiac Disease
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="diabetes" value="Diabetes">Diabetes
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="hypertension" value="Hypertension">Hypertension
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="psychiatric" value="Psychiatric Disorder">Psychiatric Disorder
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="pilepsy" value="Epilepsy">Epilepsy
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="medHistory" id="others" value="Others">Others
+                                    <br>
+                                    <input type="checkbox" class="form-check-input" name="selectNone" id="none" value="None" onclick="ifNone(this)">None
+                                </div>
+
+                                <div class="col-12 col-md-12 col-lg-4">
+                                    <label for="" class="label-control">Current Symptoms:</label>
+                                    <br>
+                                    <select name="symptoms" id="symptoms" multiple>
+                                    <option id="1" value="Chest Pain">Chest Pain</option>
+                                    <option id="2" value="Respiratory">Respiratory</option>
+                                    <option id="3" value="Hematological">Hematological</option>
+                                    <option id="4" value="Lymphatic">Lymphatic</option>
+                                    <option id="5" value="Gastrointestinal">Gastrointestinal</option>
+                                    <option id="6" value="Nuerological">Nuerological</option>
+                                    <option id="7" value="Weight Loss">Weight Loss</option>
+                                </select>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-4">
+                                    <label for="" class="label-control">Are you taking medications:</label>
+                                    <br>
+                                    <label class="form-check-label" for="">Yes</label>
+                                    <input type="radio" name="medication" id="yes" class="form-check-input" onclick="medicationEnable()" value="Yes">
+                                    <label class="form-check-label" for="">No</label>
+                                    <input type="radio" name="medication" id="no" class="form-check-input" onclick="medicationDisable()" value="No">
+                                    <input type="text" name="medication" id="medication-other" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12 text-center">
+                                <!-- <input type="button" class="btn btn-success" id="submit" value="Submit">
+                                <input type="button" class="btn btn-danger" id="reset" value="Reset"> -->
+                                <button type="submit" class="btn">Submit</button>
+                                <button type="reset" class="btn">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="clinic_registration.js"></script>
+</body>
+
+</html>
